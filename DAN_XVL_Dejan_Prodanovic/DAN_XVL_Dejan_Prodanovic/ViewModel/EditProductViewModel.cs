@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAN_XVL_Dejan_Prodanovic
+namespace DAN_XVL_Dejan_Prodanovic.ViewModel
 {
-    class TextToWriteEventArgs:EventArgs
+    class EditProductViewModel
     {
-        public string TextToWrite { get; set; }
     }
 }
