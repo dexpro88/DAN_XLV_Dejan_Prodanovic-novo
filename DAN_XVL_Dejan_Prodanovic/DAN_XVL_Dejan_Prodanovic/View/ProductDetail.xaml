@@ -5,8 +5,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DAN_XVL_Dejan_Prodanovic.View"
         mc:Ignorable="d"
-        Title="ProductDetail" Height="450" Width="800">
+        Title="Product Details"
+        Height="450"
+        Width="300"
+        Background="#2e3137"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin"
+                    Value="20,0,20,0" />
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="Padding"
+                    Value="10,0,10,0" />
+            <Setter Property="Width"
+                    Value="80" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="Background"
+                    Value="#545d6a" />
+            <Setter Property="FontSize"
+                    Value="12" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="Background"
+                    Value="#545d6a" />
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+            <Setter Property="FontSize"
+                    Value="12" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="Width"
+                    Value="200" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize"
+                    Value="12" />
+            <Setter Property="Foreground"
+                    Value="White" />
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="325" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center">
+            <StackPanel>
+                <Label Content="Name:" />
+                <TextBlock  Text="{Binding Product.ProductName}" />
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Code:" />
+                <TextBlock Text="{Binding Product.Code}" />
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Price:" />
+                <TextBlock Text="{Binding Product.Price}" />
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Amount:" />
+                <TextBlock Text="{Binding Product.Amount}" />
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Stored:" />
+                <TextBlock Text="{Binding Product.Stored}" />
+            </StackPanel>
+            <StackPanel  Margin="20">
+                <CheckBox Width="200"
+                          Name="cbStored"
+                          Foreground="White"
+                          HorizontalAlignment="Left"
+                          Content="Choose is product stored or not"
+                          Command="{Binding Path=ChooseStored}"
+                          CommandParameter="{Binding ElementName=cbStored, Path=IsChecked}"></CheckBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Grid.Row="8">
+            <Button Command="{Binding Save}"
+                    Content="Save" />
+            <Button Command="{Binding Close}"
+                    Content="Close" />
+        </StackPanel>
     </Grid>
 </Window>
