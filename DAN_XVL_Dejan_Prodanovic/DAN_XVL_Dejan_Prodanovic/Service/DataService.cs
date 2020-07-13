@@ -46,11 +46,15 @@ namespace DAN_XVL_Dejan_Prodanovic.Service
                                                 where p.ID == product.ID
                                                 select p).First();
 
-                    //tblUser oldUserData = new tblUser();
-                    //oldUserData.FirstName = userToEdit.FirstName;
+
                     //oldUserData.LastName = userToEdit.LastName;
                     //oldUserData.JMBG = userToEdit.JMBG;
                     //oldUserData.Gender = userToEdit.Gender;
+                    //oldUserData.JMBG = userToEdit.JMBG;
+                    //oldUserData.Gender = userToEdit.Gender;
+                    //oldUserData.JMBG = userToEdit.JMBG;
+                    //oldUserData.Gender = userToEdit.Gender;
+                    //oldUserData.JMBG = userToEdit.JMBG;
 
                     productToEdit.ProductName = product.ProductName;
                     productToEdit.Price = product.Price;
