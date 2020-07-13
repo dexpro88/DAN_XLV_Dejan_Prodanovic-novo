@@ -16,14 +16,14 @@ using System.Windows.Shapes;
 namespace DAN_XVL_Dejan_Prodanovic.View
 {
     /// <summary>
-    /// Interaction logic for ManagerMainView.xaml
+    /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class ManagerMainView : Window
+    public partial class LoginView : Window
     {
-        public ManagerMainView()
+        public LoginView()
         {
             InitializeComponent();
-            DataContext = new ManagerMainViewModel(this);
+            DataContext = new LoginViewModel(this);
         }
     }
 }
